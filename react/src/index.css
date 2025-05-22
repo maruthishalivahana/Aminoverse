@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+ background-color: #0A0F1D;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* body{
+  overflow: hidden;
+} */
+
+/* Add this to your global CSS file or inside a <style> tag */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+.fade-in-delayed {
+  animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+.fade-in-slow {
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.input-text{
+  background-color: none;
+}
