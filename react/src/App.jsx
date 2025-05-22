@@ -1,34 +1,17 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
-import Userinput from "./components/Userinput.jsx";
+import { Routes, Route } from "react-router-dom";
+import { routes } from "./routes";
 import './App.css';
-import Landingpage from './components/Landingpage.jsx';
-import Login from './components/Login.jsx';
 
 function App() {
   return (
     <Routes>
-      {/* Public routes */}
-      <Route path="/" element={<Landingpage />} />
-      <Route path="/login" element={<Login />} />
-
-      {/* Protected routes */}
-      <Route
-        path="/home"
-        element={
-          <>
-            <SignedIn>
-              <Userinput />
-            </SignedIn>
-            <SignedOut>
-              <RedirectToSignIn />
-            </SignedOut>
-          </>
-        }
-      />
-
-      {/* Catch all route */}
-      <Route path="*" element={<Navigate to="/" replace />} />
+      {routes.map((route) => (
+        <Route
+          key={route.path}
+          path={route.path}
+          element={route.element}
+        />
+      ))}
     </Routes>
   );
 }

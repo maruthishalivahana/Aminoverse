@@ -1,26 +1,23 @@
 import React from 'react';
-import { SignIn } from '@clerk/clerk-react';
-import { useNavigate } from 'react-router-dom';
+import { SignUp } from '@clerk/clerk-react';
 
-const Login = () => {
-    const navigate = useNavigate();
-
+const SignUpPage = () => {
     return (
         <div className="min-h-screen bg-[#0A0F1D] flex items-center justify-center px-4">
             <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
                 <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-6">
-                    Login to AminoVerse
+                    Create your AminoVerse account
                 </h2>
-                <SignIn
+                <SignUp
                     routing="path"
-                    path="/login"
-                    signUpUrl="/sign-up"
+                    path="/sign-up"
+                    signInUrl="/login"
                     redirectUrl="/home"
-                    afterSignInUrl="/home"
+                    afterSignUpUrl="/home"
                 />
             </div>
         </div>
     );
 };
 
-export default Login; 
+export default SignUpPage; 
