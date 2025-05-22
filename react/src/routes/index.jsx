@@ -11,7 +11,7 @@ const ProtectedRoute = ({ children }) => {
         <>
             <SignedIn>{children}</SignedIn>
             <SignedOut>
-                <RedirectToSignIn redirectUrl="/login" />
+                <Navigate to="/login" replace />
             </SignedOut>
         </>
     );
@@ -29,10 +29,22 @@ const PublicRoute = ({ children }) => {
     );
 };
 
+// Root Route wrapper component
+const RootRoute = ({ children }) => {
+    return (
+        <>
+            <SignedIn>
+                <Navigate to="/home" replace />
+            </SignedIn>
+            <SignedOut>{children}</SignedOut>
+        </>
+    );
+};
+
 export const routes = [
     {
         path: "/",
-        element: <PublicRoute><Landingpage /></PublicRoute>,
+        element: <RootRoute><Landingpage /></RootRoute>,
     },
     {
         path: "/login",
