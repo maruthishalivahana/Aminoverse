@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-    const [email, setemail] = useState("");
-    const [password, setpassword] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
     const handleDemoLogin = () => {
-        setemail("demoexample@gmail.com");
-        setpassword("1234");
+        setEmail("demoexample@gmail.com");
+        setPassword("1234");
         setTimeout(() => {
             alert("Login as demo user");
             navigate("/home");
@@ -17,7 +17,13 @@ const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        // form login logic if needed
+        // Here you would typically make an API call to verify credentials
+        // For demo purposes, we'll just redirect
+        if (email && password) {
+            navigate("/home");
+        } else {
+            alert("Please fill in all fields");
+        }
     };
 
     return (
@@ -27,7 +33,7 @@ const Login = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-6">
                         Login to your account
                     </h2>
-                    <form className="space-y-5 " onSubmit={handleLogin}>
+                    <form className="space-y-5" onSubmit={handleLogin}>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                                 Email
@@ -35,6 +41,8 @@ const Login = () => {
                             <input
                                 id="email"
                                 type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 placeholder="you@example.com"
                                 required
                                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none text-black focus:ring-2 focus:ring-blue-500"
@@ -48,6 +56,8 @@ const Login = () => {
                             <input
                                 id="password"
                                 type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 placeholder="••••••••"
                                 required
                                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none text-black  focus:ring-2 focus:ring-blue-500"
@@ -70,9 +80,16 @@ const Login = () => {
                         <button
                             type="submit"
                             className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-200"
-                            onClick={handleDemoLogin}
                         >
                             Login
+                        </button>
+
+                        <button
+                            type="button"
+                            onClick={handleDemoLogin}
+                            className="w-full bg-gray-600 text-white py-2 rounded-lg hover:bg-gray-700 transition duration-200 mt-2"
+                        >
+                            Try Demo Login
                         </button>
                     </form>
                 </div>
