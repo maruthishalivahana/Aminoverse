@@ -27,7 +27,7 @@ const AccountName = () => {
 function Navbar() {
     return (
         <>
-            <div className="navbar flex sticky top-0 items-center  mt-2 justify-between   bg-[#061025] sm:pt-3 sm:pb-3 pl-4 pr-4  sm:w-full">
+            <div className="navbar flex sticky top-0 items-center  mt-2 justify-between   bg-[#061025] sm:pt-3 sm:pb-3 pl-4 pr-4  sm:w-full mt-20 sm:mt-0">
                 <div className="logo mr-4 text-left flex justify-start sm:text-xl" >AminoVerse.</div>
                 <div className="navlinks">
                     <div className='flex items-center gap-2'>
