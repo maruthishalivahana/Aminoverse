@@ -9,15 +9,16 @@ import Login from './components/Login.jsx';
 
 function App() {
   return (
+    <div className="min-h-screen bg-[#0A0F1D]">
+      <Routes>
+        {/* This is the default route shown when user opens the site */}
+        <Route path="/" element={<Landingpage />} />
 
-    <Routes>
-      {/* This is the default route shown when user opens the site */}
-      <Route path="/" element={<Landingpage />} />
-
-      {/* This is the login route */}
-      <Route path="/login" element={<Login />} />
-      <Route path="/home" element={<Userinput />} />
-    </Routes>
+        {/* This is the login route */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Userinput />} />
+      </Routes>
+    </div>
   );
 }
 

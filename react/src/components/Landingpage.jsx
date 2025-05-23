@@ -1,30 +1,22 @@
 import React from 'react'
-import heroImage from '/gene-hero.avif'
 import Fotter from './Fotter'
 import NavLanding from './NavLanding'
 
 function Landingpage() {
     return (
-
         <>
-
             <div>
-
                 <NavLanding />
-
                 <div className=" " >
                     <div className='p-4 mt-10'>
                         <h1 className=" fade-in  text-4xl md:text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-blue-500 to-cyan-400 animate-fade-in-up">
                             Explore Proteins Like Never Before
                         </h1>
                         <div className="absolute top-30 sm:top-80 left-0 sm:left-20 right-[53px] w-[200px] h-[200px] bg-pink-400 opacity-30 rounded-full blur-2xl animate-pulse"></div>
-
                     </div>
 
-
                     <div className='rounded m-5 flex items-center justify-center'>
-                        <img src={heroImage} alt="" className='rounded fade-in sm:w-[600px] sm:h-auto object-cover' />
-
+                        <img src="/gene-hero.avif" alt="Hero" className='rounded fade-in sm:w-[600px] sm:h-auto object-cover' />
                     </div>
                 </div>
                 <p className='mt-10 ml-auto mr-auto text-gray-400  text-center sm:w-3xl align-middle '>Aminoverse is your intelligent bioscience companion. Just type the name of a human gene or protein and get back powerful, visual, and interactive insights — all in a ChatGPT-like experience.</p>
