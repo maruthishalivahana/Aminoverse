@@ -270,8 +270,10 @@ const Userinput = () => {
 
         <>
             <div className='h-screen flex flex-col'>
-                <div className='flex-shrink-0'>
+                <div className='felx '>
                     <Navbar />
+
+
                 </div>
 
                 <div className='flex flex-1 overflow-hidden'>
