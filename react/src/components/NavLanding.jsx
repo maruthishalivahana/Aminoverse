@@ -39,7 +39,7 @@ function NavLanding() {
                                 </SignInButton>
                             </li>
                             <li>
-                                <SignUpButton>
+                                <SignUpButton modele="modal" redirectUrl="/home">
                                     <button className='hover:text-blue-200 transition-colors'>Sign up</button>
                                 </SignUpButton>
                             </li>
