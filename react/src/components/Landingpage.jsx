@@ -52,9 +52,9 @@ function Landingpage() {
                 </div>
                 <h1 className='text-center align-middle text-3xl text-[#00bef7] mt-10 '>Contact Us</h1>
                 <div className='contactus mt-10 flex flex-col  items-center justify-center gap-4 mb-10'>
-                    <input type="text" className='p-2  rounded  sm:w-[380px]  w-[280px] mr-10 ml-10 border border-blue-600 in-focus:border-blue-600 ' placeholder='Enter your name :' />
-                    <input type="mail" placeholder='Enter your email :' className='p-2  sm:w-[380px] rounded   w-[280px] mr-10 ml-10 border border-blue-600 in-focus:border-blue-600 ' />
-                    <input type="textarea" placeholder='Message :' className='p-2  sm:w-[380px] rounded h-[200px]   w-[280px] mr-10 ml-10 border border-blue-600 in-focus:border-blue-600 ' />
+                    <input type="text" className='p-2  rounded  sm:w-[380px]  w-[280px] mr-10 ml-10 border border-blue-600 in-focus:border-blue-600 ' placeholder='enter your name :' />
+                    <input type="mail" placeholder='enter your email :' className='p-2  sm:w-[380px] rounded   w-[280px] mr-10 ml-10 border border-blue-600 in-focus:border-blue-600 ' />
+                    <input type="textarea" placeholder='massage' className='p-2  sm:w-[380px] rounded h-[200px]   w-[280px] mr-10 ml-10 border border-blue-600 in-focus:border-blue-600 ' />
                     <button className='bg-blue-400 p-2 rounded w-[150px] ml-10 mr-10 cursor-pointer'>Submit</button>
                 </div>
                 <div className='text-center m-10 '>
