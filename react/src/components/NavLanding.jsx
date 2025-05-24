@@ -13,12 +13,7 @@ import {
 
 
 function NavLanding() {
-    // If you want to use a popup, uncomment the next line:
-    // const [showPopup, setShowPopup] = React.useState(false);
-
-    // const handleDemoClick = () => {
-    //     setShowPopup(true);
-    // };
+   
 
     return (
         <div className='bg-[#061025] p-4 w-full'>
